@@ -21,7 +21,7 @@ defmodule DazzleWeb.TickerLive do
   end
 
   defp inc(socket) do
-    assign(socket, count: socket.assigns.count + 1)
+    assign(socket, count: socket.assigns.count + 2)
   end
 
   def handle_info(:tick, socket) do
