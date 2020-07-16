@@ -39,7 +39,7 @@ defmodule DazzleWeb.TickerLive do
     |> Phoenix.HTML.raw()
   end
 
-  defp padded_message(string, count) do
+  defp padded_message(string, _count) do
     sixty_spaces = List.duplicate(32, 40)
 
     string
