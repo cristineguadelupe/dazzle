@@ -34,6 +34,7 @@ defmodule DazzleWeb.TickerLive do
 
     Enum.drop(message, split_point)
     |> Kernel.++(Enum.take(message, split_point))
+    |> Enum.reverse()
     |> to_string()
     |> Phoenix.HTML.raw()
   end
@@ -43,6 +44,7 @@ defmodule DazzleWeb.TickerLive do
 
     string
     |> String.to_charlist()
+    |> Enum.reverse()
     |> Kernel.++(sixty_spaces)
     |> Enum.take(60)
   end
