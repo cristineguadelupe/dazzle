@@ -11,7 +11,7 @@ defmodule DazzleWeb.TickerLive do
     <br><br><br><br><br><br><br><br><br>
     <h1>Dazzle count: <%= @count %></h1>
     <br><br><br><br><br><br><br><br><br>
-    <pre style="transform: rotate(<%= -@count %>deg); text-align: center; width: 400px;">
+    <pre style="transform: rotate(<%= -(@count * 2) %>deg); text-align: center; width: 400px;">
     <h2>Rotated</h2>
     </pre>
     <br><br><br><br><br><br><br><br><br>
@@ -21,7 +21,7 @@ defmodule DazzleWeb.TickerLive do
   end
 
   defp inc(socket) do
-    assign(socket, count: socket.assigns.count + 2)
+    assign(socket, count: socket.assigns.count + 1)
   end
 
   def handle_info(:tick, socket) do
