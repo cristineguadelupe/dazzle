@@ -19,6 +19,7 @@ defmodule DazzleWeb.Router do
 
     live "/", PageLive, :index
     live "/ticker", TickerLive
+    live "time", TimeLive
   end
 
   # Other scopes may use custom stacks.
